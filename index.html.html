@@ -1,0 +1,381 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ôn từ vựng lớp 9</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;700;800&family=Noto+Sans:wght@500&display=swap">
+<style>
+/* Layout: one centred column, 640px max. Start screen, quiz card, result screen share the same frame. */
+:root {
+  --bg: #F2F6FC;
+  --surface: #FFFFFF;
+  --fg: #14213D;
+  --muted: #55627F;
+  --line: #D6E0F0;
+  --accent: #2F6BFF;
+  --accent-fg: #FFFFFF;
+  --accent-soft: #E3ECFF;
+  --good: #0F7A52;
+  --good-soft: #DDF5EA;
+  --bad: #C42B34;
+  --bad-soft: #FDE4E5;
+  --hl: #FFC93C;
+  --font-display: "Baloo 2", "Nunito", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
+  --font-ipa: "Noto Sans", "Segoe UI", "Arial Unicode MS", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1526; --surface: #18223A; --fg: #EAF0FF; --muted: #9DABCB; --line: #2B3A5C;
+    --accent: #6C98FF; --accent-fg: #0E1526; --accent-soft: #22325C;
+    --good: #4CD99B; --good-soft: #10382B; --bad: #FF8A91; --bad-soft: #43202A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1526; --surface: #18223A; --fg: #EAF0FF; --muted: #9DABCB; --line: #2B3A5C;
+  --accent: #6C98FF; --accent-fg: #0E1526; --accent-soft: #22325C;
+  --good: #4CD99B; --good-soft: #10382B; --bad: #FF8A91; --bad-soft: #43202A;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.5;
+  padding-block: 20px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+button { font-family: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--muted); }
+.brand b { background: var(--hl); color: #14213D; border-radius: 8px; padding: 2px 10px; font-weight: 800; }
+
+.card { background: var(--surface); border: 2px solid var(--line); border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+
+.btn { border: 0; border-radius: 14px; background: var(--accent); color: var(--accent-fg); font-weight: 800; font-size: 1.1rem; padding: 14px 22px; min-height: 52px; cursor: pointer; transition: transform .1s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(1px); }
+.btn.ghost { background: var(--accent-soft); color: var(--accent); }
+:root[data-theme="dark"] .btn.ghost { color: var(--fg); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn.ghost { color: var(--fg); } }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-row .btn { flex: 1 1 180px; }
+
+/* Start */
+.hero-title { font-size: clamp(2rem, 7vw, 2.8rem); font-weight: 800; }
+.hero-title span { background: linear-gradient(transparent 62%, var(--hl) 62% 92%, transparent 92%); padding: 0 4px; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.steps li { display: flex; gap: 12px; align-items: flex-start; }
+.steps i { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-style: normal; font-weight: 800; display: grid; place-items: center; font-size: .95rem; }
+:root[data-theme="dark"] .steps i { color: var(--fg); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .steps i { color: var(--fg); } }
+.muted { color: var(--muted); }
+
+/* Quiz */
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 800; }
+.chip { background: var(--good-soft); color: var(--good); border-radius: 999px; padding: 4px 14px; font-weight: 800; font-size: .95rem; }
+.bar { height: 12px; background: var(--accent-soft); border-radius: 999px; overflow: hidden; }
+.bar > div { height: 100%; width: 0; background: var(--accent); border-radius: 999px; transition: width .3s ease; }
+
+.word-box { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 8px 0 2px; }
+.word { font-family: var(--font-display); font-size: clamp(2.4rem, 11vw, 3.6rem); font-weight: 800; line-height: 1.05; overflow-wrap: anywhere; background: linear-gradient(transparent 64%, var(--hl) 64% 90%, transparent 90%); padding: 0 8px; }
+.meta { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.pos { background: var(--accent-soft); color: var(--accent); border-radius: 8px; padding: 2px 10px; font-weight: 800; font-size: .9rem; }
+:root[data-theme="dark"] .pos { color: var(--fg); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pos { color: var(--fg); } }
+.ipa { font-family: var(--font-ipa); color: var(--muted); font-size: 1.05rem; }
+.speak { border: 2px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 6px 14px; font-weight: 800; cursor: pointer; font-size: .95rem; min-height: 40px; }
+.speak:hover { border-color: var(--accent); }
+.prompt { text-align: center; color: var(--muted); font-weight: 700; }
+
+.opts { display: grid; gap: 10px; }
+.opt { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 12px 14px; min-height: 58px; border: 2px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: border-color .12s ease, background .12s ease; }
+.opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+.opt .ltr { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-weight: 800; }
+:root[data-theme="dark"] .opt .ltr { color: var(--fg); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .opt .ltr { color: var(--fg); } }
+.opt .txt { min-width: 0; overflow-wrap: anywhere; }
+.opt:disabled { cursor: default; }
+.opt.correct { border-color: var(--good); background: var(--good-soft); }
+.opt.correct .ltr { background: var(--good); color: var(--surface); }
+.opt.wrong { border-color: var(--bad); background: var(--bad-soft); }
+.opt.wrong .ltr { background: var(--bad); color: var(--surface); }
+.opt.dim { opacity: .55; }
+
+.feedback { border-radius: 14px; padding: 12px 16px; font-weight: 700; }
+.feedback.ok { background: var(--good-soft); color: var(--good); }
+.feedback.no { background: var(--bad-soft); color: var(--bad); }
+.feedback strong { font-family: var(--font-display); font-size: 1.15rem; display: block; }
+
+/* Result */
+.score-box { text-align: center; display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.score-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(3.4rem, 16vw, 5rem); line-height: 1; }
+.score-num small { font-size: .45em; color: var(--muted); }
+.stars { font-size: 2rem; letter-spacing: 4px; color: var(--hl); }
+.stars .off { color: var(--line); }
+.tally { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.tally span { border-radius: 999px; padding: 4px 16px; font-weight: 800; }
+.tally .g { background: var(--good-soft); color: var(--good); }
+.tally .b { background: var(--bad-soft); color: var(--bad); }
+.review { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.review li { border: 2px solid var(--line); border-radius: 12px; padding: 10px 14px; display: flex; flex-direction: column; gap: 2px; }
+.review b { font-family: var(--font-display); font-size: 1.2rem; }
+.review .vi { color: var(--good); font-weight: 800; }
+
+@media (max-width: 420px) {
+  .card { padding: 16px; }
+  body { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+
+<div class="wrap">
+  <div class="brand"><b>Vocab</b> Ôn từ vựng lớp 9</div>
+
+  <!-- Start -->
+  <section id="screen-start" class="card">
+    <h1 class="hero-title">Ôn lại <span>20 từ vựng</span> nào!</h1>
+    <p class="muted">Mỗi câu có một từ tiếng Anh và 4 nghĩa tiếng Việt. Em chỉ cần chọn nghĩa đúng.</p>
+    <ul class="steps">
+      <li><i>1</i><span>Đọc từ tiếng Anh. Bấm <b>Nghe</b> để nghe cách đọc.</span></li>
+      <li><i>2</i><span>Bấm vào nghĩa em nghĩ là đúng. Biết ngay đúng hay sai.</span></li>
+      <li><i>3</i><span>Làm xong 20 câu, em sẽ thấy tổng số câu đúng và các từ cần ôn lại.</span></li>
+    </ul>
+    <button class="btn" id="btn-start" type="button">Bắt đầu làm bài</button>
+  </section>
+
+  <!-- Quiz -->
+  <section id="screen-quiz" class="card" hidden>
+    <div class="top">
+      <span id="q-count">Câu 1/20</span>
+      <span class="chip" id="q-score">Đúng: 0</span>
+    </div>
+    <div class="bar" role="progressbar" aria-label="Tiến độ" aria-valuemin="0" aria-valuemax="100" id="bar-wrap"><div id="bar"></div></div>
+
+    <div class="word-box">
+      <div class="word" id="q-word"></div>
+      <div class="meta">
+        <span class="pos" id="q-pos"></span>
+        <span class="ipa" id="q-ipa"></span>
+        <button class="speak" id="btn-speak" type="button">🔊 Nghe</button>
+      </div>
+    </div>
+    <p class="prompt">Chọn nghĩa tiếng Việt đúng</p>
+    <div class="opts" id="opts"></div>
+    <div id="feedback" aria-live="polite"></div>
+    <button class="btn" id="btn-next" type="button" hidden>Câu tiếp theo</button>
+  </section>
+
+  <!-- Result -->
+  <section id="screen-result" class="card" hidden>
+    <div class="score-box">
+      <h2 id="r-title">Kết quả</h2>
+      <div class="score-num"><span id="r-score">0</span><small>/<span id="r-total">20</span></small></div>
+      <div class="stars" id="r-stars" aria-hidden="true"></div>
+      <p id="r-msg" class="muted"></p>
+    </div>
+    <div class="tally"><span class="g" id="r-good">Đúng: 0</span><span class="b" id="r-bad">Sai: 0</span></div>
+    <div id="r-review-wrap" hidden>
+      <h3 style="margin-bottom:10px">Các từ cần ôn lại</h3>
+      <ul class="review" id="r-review"></ul>
+    </div>
+    <div class="btn-row">
+      <button class="btn ghost" id="btn-retry-wrong" type="button" hidden>Ôn lại các câu sai</button>
+      <button class="btn" id="btn-again" type="button">Làm lại 20 câu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  var WORDS = [
+    { w: 'semester', p: 'n', ipa: '/səˈmes.tɚ/', vi: 'học kỳ' },
+    { w: 'revive', p: 'v', ipa: '/rɪˈvaɪv/', vi: 'làm sống lại, hồi sinh' },
+    { w: 'practical', p: 'adj', ipa: '/ˈpræk.tɪ.kəl/', vi: 'thực tế, thiết thực' },
+    { w: 'immaturity', p: 'n', ipa: '/ˌɪm.əˈtʃʊr.ɪ.tiz/', vi: 'sự non nớt, sự chưa trưởng thành' },
+    { w: 'furious', p: 'adj', ipa: '/ˈfʊr.i.əs/', vi: 'giận dữ' },
+    { w: 'attention', p: 'n', ipa: '/əˈten.ʃən/', vi: 'sự chú ý' },
+    { w: 'cuisine', p: 'n', ipa: '/kwɪˈziːn/', vi: 'ẩm thực' },
+    { w: 'favour', p: 'v', ipa: '/ˈfeɪ.vɚ/', vi: 'thích dùng' },
+    { w: 'vegetarian', p: 'adj, n', ipa: '/ˌvedʒ.əˈter.i.ən/', vi: '(thuộc) chay, ăn chay, người ăn chay' },
+    { w: 'various', p: 'adj', ipa: '/ˈver.i.əs/', vi: 'khác nhau' },
+    { w: 'critical', p: 'adj', ipa: '/ˈkrɪt.ɪ.kəl/', vi: 'phê bình, quan trọng, chỉ trích' },
+    { w: 'technology', p: 'n', ipa: '/tekˈnɑː.lə.dʒi/', vi: 'kỹ thuật, công nghệ' },
+    { w: 'interact', p: 'v', ipa: '/ˌɪn.tɚˈækt/', vi: 'tương tác' },
+    { w: 'interaction', p: 'n', ipa: '/ˌɪn.tɚˈræk.ʃən/', vi: 'sự tương tác' },
+    { w: 'independent', p: 'adj', ipa: '/ˌɪn.dɪˈpen.dənt/', vi: 'độc lập, không phụ thuộc' },
+    { w: 'impact', p: 'n, v', ipa: '/ˈɪm.pækt/', vi: 'sự va chạm, tác động' },
+    { w: 'charity', p: 'n', ipa: '/ˈtʃer.ə.ti/', vi: 'việc từ thiện' },
+    { w: 'adopt', p: 'v', ipa: '/əˈdɑːpt/', vi: 'theo, làm theo' },
+    { w: 'overweight', p: 'adj', ipa: '/ˌoʊ.vɚˈweɪt/', vi: 'thừa cân' },
+    { w: 'nomadic', p: 'adj', ipa: '/noʊˈmæd.ɪk/', vi: 'du mục' }
+  ];
+  // Cặp nghĩa quá giống nhau, không đặt chung một câu hỏi
+  var CONFLICT = { interact: 'interaction', interaction: 'interact' };
+
+  var $ = function (id) { return document.getElementById(id); };
+  var screens = { start: $('screen-start'), quiz: $('screen-quiz'), result: $('screen-result') };
+  var LETTERS = ['A', 'B', 'C', 'D'];
+  var state = { list: [], i: 0, score: 0, wrong: [], answered: false, current: null };
+
+  function show(name) {
+    Object.keys(screens).forEach(function (k) { screens[k].hidden = (k !== name); });
+    window.scrollTo(0, 0);
+  }
+  function shuffle(a) {
+    a = a.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+  function speak(text) {
+    try {
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-US'; u.rate = 0.85;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    } catch (e) { /* trình duyệt không hỗ trợ */ }
+  }
+
+  function makeQuestion(word) {
+    var pool = WORDS.filter(function (x) { return x.w !== word.w && CONFLICT[word.w] !== x.w && x.vi !== word.vi; });
+    var wrongs = shuffle(pool).slice(0, 3).map(function (x) { return x.vi; });
+    return { word: word, options: shuffle([word.vi].concat(wrongs)) };
+  }
+
+  function start(list) {
+    state.list = shuffle(list);
+    state.i = 0; state.score = 0; state.wrong = [];
+    show('quiz');
+    renderQuestion();
+  }
+
+  function renderQuestion() {
+    var total = state.list.length;
+    var q = makeQuestion(state.list[state.i]);
+    state.current = q; state.answered = false;
+
+    $('q-count').textContent = 'Câu ' + (state.i + 1) + '/' + total;
+    $('q-score').textContent = 'Đúng: ' + state.score;
+    $('bar').style.width = (state.i / total * 100) + '%';
+    $('bar-wrap').setAttribute('aria-valuenow', Math.round(state.i / total * 100));
+    $('q-word').textContent = q.word.w;
+    $('q-pos').textContent = q.word.p;
+    $('q-ipa').textContent = q.word.ipa;
+    $('feedback').innerHTML = '';
+    $('btn-next').hidden = true;
+    $('btn-next').textContent = (state.i === total - 1) ? 'Xem kết quả' : 'Câu tiếp theo';
+
+    var box = $('opts');
+    box.innerHTML = '';
+    q.options.forEach(function (text, idx) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'opt';
+      b.innerHTML = '<span class="ltr"></span><span class="txt"></span>';
+      b.children[0].textContent = LETTERS[idx];
+      b.children[1].textContent = text;
+      b.addEventListener('click', function () { choose(idx); });
+      box.appendChild(b);
+    });
+  }
+
+  function choose(idx) {
+    if (state.answered) return;
+    state.answered = true;
+    var q = state.current;
+    var correctIdx = q.options.indexOf(q.word.vi);
+    var btns = $('opts').children;
+    for (var k = 0; k < btns.length; k++) {
+      btns[k].disabled = true;
+      if (k === correctIdx) btns[k].classList.add('correct');
+      else if (k === idx) btns[k].classList.add('wrong');
+      else btns[k].classList.add('dim');
+    }
+    var fb = $('feedback');
+    if (idx === correctIdx) {
+      state.score++;
+      fb.innerHTML = '<div class="feedback ok"><strong>Chính xác! 🎉</strong>' + q.word.w + ' = ' + escapeHtml(q.word.vi) + '</div>';
+    } else {
+      state.wrong.push(q.word);
+      fb.innerHTML = '<div class="feedback no"><strong>Chưa đúng, không sao!</strong>Đáp án đúng: ' + escapeHtml(q.word.vi) + '</div>';
+    }
+    $('q-score').textContent = 'Đúng: ' + state.score;
+    var next = $('btn-next');
+    next.hidden = false;
+    next.focus({ preventScroll: false });
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
+  }
+
+  function next() {
+    state.i++;
+    if (state.i >= state.list.length) showResult();
+    else renderQuestion();
+  }
+
+  function showResult() {
+    var total = state.list.length, score = state.score, pct = score / total;
+    $('r-score').textContent = score;
+    $('r-total').textContent = total;
+    $('r-good').textContent = 'Đúng: ' + score;
+    $('r-bad').textContent = 'Sai: ' + (total - score);
+
+    var title, msg;
+    if (pct >= 0.9) { title = 'Xuất sắc!'; msg = 'Em nhớ gần hết các từ rồi. Giữ vững phong độ nhé!'; }
+    else if (pct >= 0.7) { title = 'Làm tốt lắm!'; msg = 'Chỉ còn vài từ nữa là hoàn hảo. Ôn lại các từ bên dưới nhé.'; }
+    else if (pct >= 0.5) { title = 'Khá ổn rồi!'; msg = 'Em đã nhớ được một nửa. Làm thêm một lượt nữa sẽ nhớ nhiều hơn.'; }
+    else { title = 'Cố gắng lên nào!'; msg = 'Đừng nản. Đọc lại các từ bên dưới rồi thử lại, em sẽ tiến bộ nhanh.'; }
+    $('r-title').textContent = title;
+    $('r-msg').textContent = msg;
+
+    var stars = Math.round(pct * 5), s = '';
+    for (var i = 0; i < 5; i++) s += i < stars ? '★' : '<span class="off">★</span>';
+    $('r-stars').innerHTML = s;
+
+    var list = $('r-review');
+    list.innerHTML = '';
+    state.wrong.forEach(function (w) {
+      var li = document.createElement('li');
+      li.innerHTML = '<b></b><span class="ipa"></span><span class="vi"></span>';
+      li.children[0].textContent = w.w + '  (' + w.p + ')';
+      li.children[1].textContent = w.ipa;
+      li.children[2].textContent = w.vi;
+      list.appendChild(li);
+    });
+    $('r-review-wrap').hidden = state.wrong.length === 0;
+    $('btn-retry-wrong').hidden = state.wrong.length === 0;
+    $('bar').style.width = '100%';
+    show('result');
+  }
+
+  $('btn-start').addEventListener('click', function () { start(WORDS); });
+  $('btn-next').addEventListener('click', next);
+  $('btn-again').addEventListener('click', function () { start(WORDS); });
+  $('btn-retry-wrong').addEventListener('click', function () { start(state.wrong.slice()); });
+  $('btn-speak').addEventListener('click', function () { if (state.current) speak(state.current.word.w); });
+  if (!('speechSynthesis' in window)) $('btn-speak').hidden = true;
+
+  // Phím tắt: 1-4 hoặc A-D để chọn đáp án
+  document.addEventListener('keydown', function (e) {
+    if (screens.quiz.hidden || state.answered || e.ctrlKey || e.metaKey || e.altKey) return;
+    var k = e.key.toLowerCase(), idx = '1234'.indexOf(k);
+    if (idx < 0) idx = 'abcd'.indexOf(k);
+    if (idx >= 0 && idx < 4) choose(idx);
+  });
+})();
+</script>
+
+</body></html>
